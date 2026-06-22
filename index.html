@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Betterhomes Onboarding Request</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="logo">betterhomes<span>.</span></div>
+      <div class="secure">🔒 Secure onboarding</div>
+    </header>
+
+    <section class="hero broker-hero">
+      <p class="eyebrow">Broker portal</p>
+      <h1>Create onboarding request</h1>
+      <p>Select Form A or LSA, choose the documents required, then generate a secure client upload link.</p>
+    </section>
+
+    <section class="panel">
+      <label class="field-label">Request type</label>
+      <div class="type-grid" id="typeGrid">
+        <button type="button" class="type-card active" data-type="form_a">
+          <span>🏠</span><strong>Sales Listing</strong><small>Form A</small>
+        </button>
+        <button type="button" class="type-card" data-type="lsa">
+          <span>🔑</span><strong>Leasing Listing</strong><small>LSA</small>
+        </button>
+      </div>
+
+      <div class="form-grid">
+        <label>Owner name<input id="ownerName" autocomplete="name" placeholder="Owner full name" /></label>
+        <label>Owner email<input id="ownerEmail" type="email" placeholder="owner@email.com" /></label>
+        <label>Owner mobile<input id="ownerMobile" placeholder="+971..." /></label>
+        <label>Property address<input id="propertyAddress" placeholder="Unit, building, community" /></label>
+      </div>
+
+      <div class="section-title">Documents to request</div>
+      <div id="docs" class="doc-select"></div>
+
+      <button id="createBtn" type="button" class="primary">Create client link</button>
+      <div id="result" class="result hidden"></div>
+      <div id="debug" class="debug hidden"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

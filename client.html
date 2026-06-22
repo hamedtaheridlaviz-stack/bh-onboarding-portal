@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Document Upload</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell client-shell">
+    <header class="topbar">
+      <div class="logo">betterhomes<span>.</span></div>
+      <div class="secure">🔒 Private link</div>
+    </header>
+
+    <section id="loading" class="panel">Loading request...</section>
+
+    <section id="content" class="hidden">
+      <section class="hero client-hero">
+        <p class="eyebrow" id="requestType"></p>
+        <h1 id="propertyTitle"></h1>
+        <p id="ownerLine"></p>
+      </section>
+
+      <section class="letter-card">
+        <div class="letter-col">
+          <span class="lang">EN</span>
+          <p><strong>Dear Valued Client,</strong></p>
+          <p>Thank you for choosing Betterhomes.</p>
+          <p>To proceed with the marketing of your property and complete the required compliance checks, please upload the requested documents using the secure portal below.</p>
+          <p>All information submitted will be treated confidentially and used solely for ownership verification, regulatory compliance, and preparation of your listing.</p>
+          <p>Kind regards,</p>
+          <div class="signature">Hamed Taheri</div>
+        </div>
+        <div class="letter-col ar" dir="rtl">
+          <span class="lang">AR</span>
+          <p><strong>العميل الكريم،</strong></p>
+          <p>شكراً لاختياركم بيترهومز.</p>
+          <p>للمتابعة في تسويق عقاركم واستكمال متطلبات الامتثال، يرجى رفع المستندات المطلوبة من خلال البوابة الآمنة أدناه.</p>
+          <p>سيتم التعامل مع جميع المعلومات بسرية تامة واستخدامها فقط للتحقق من الملكية واستكمال المتطلبات التنظيمية وتجهيز العقار للتسويق.</p>
+          <p>مع خالص التقدير،</p>
+          <div class="signature">Hamed Taheri</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">Requested documents</div>
+        <p class="muted">Upload each requested item, then submit securely.</p>
+        <div id="uploadList" class="upload-list"></div>
+        <label class="consent"><input id="consent" type="checkbox" /> I confirm the documents are correct and consent to their use for onboarding and compliance.</label>
+        <button id="submitBtn" type="button" class="primary">Submit documents securely</button>
+        <div id="status" class="result hidden"></div>
+      </section>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
