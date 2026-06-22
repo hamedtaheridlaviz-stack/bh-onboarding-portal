@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Betterhomes Onboarding Portal</title><link rel="stylesheet" href="styles.css"/></head><body>
+<div class="app">
+<header><div class="brand">betterhomes</div><div class="badge">Secure onboarding</div></header>
+<section class="hero"><h1>Create onboarding request</h1><p>Select the agreement, client details and documents. Then copy the secure client link into WhatsApp or email.</p></section>
+<section class="card">
+<label>Request type</label><div class="seg"><button class="active" data-type="form_a">Sales Form A</button><button data-type="lsa">Leasing LSA</button></div>
+<div class="grid"><div><label>Owner name</label><input id="ownerName" placeholder="Owner full name"></div><div><label>Owner email</label><input id="ownerEmail" placeholder="owner@email.com"></div><div><label>Owner mobile</label><input id="ownerMobile" placeholder="+971..."></div><div><label>Property</label><input id="propertyAddress" placeholder="Unit, building, community"></div></div>
+<label>Documents to request</label><div id="docs" class="checks"></div>
+<button id="createBtn" class="primary">Create client link</button><div id="result" class="result hidden"></div>
+</section></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script></body></html>
